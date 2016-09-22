@@ -21,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/antongorodezkiy/vue-nouislider/issues"
   },
-  "homepage": "https://github.com/antongorodezkiy/vue-nouislider#readme"
+  "homepage": "https://github.com/antongorodezkiy/vue-nouislider#readme",
+  "dependencies": {
+    "vue": "^1.0.25",
+    "nouislider": "~8.5.1"
+  }
 }
