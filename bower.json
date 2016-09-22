@@ -1,21 +1,21 @@
 {
   "name": "vue-nouislider",
-  "homepage": "https://github.com/poteralski/vue-nouislider",
+  "homepage": "https://github.com/antongorodezkiy/vue-nouislider",
   "authors": [
-    "ppoteralski <poteralski.dev@gmail.com>"
+    "ppoteralski <poteralski.dev@gmail.com>",
+    "antongorodezkiy <antongorodezkiy@gmail.com>"
   ],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
-    "vue": "~1.0.21",
-    "jquery": "~2.1.0",
-    "nouislider": "~6.2.0"
+    "vue": "~1.0.26",
+    "nouislider": "~8.5.1"
   },
-  "description": "Simple Vue.js component for jquery nouislider plugin.",
-  "main": "src/nouislider.vue.js",
+  "description": "Vue.js component for Nouislider plugin.",
+  "main": "src/vue-nouislider.js",
   "keywords": [
     "vue",
     "slider",
-    "input",
+    "nouislider",
     "component"
   ],
   "license": "MIT"

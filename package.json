@@ -1,0 +1,25 @@
+{
+  "name": "vue-nouislider",
+  "version": "0.1.1",
+  "description": "Vue.js component for Nouislider plugin.",
+  "main": "src/vue-nouislider.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antongorodezkiy/vue-nouislider.git"
+  },
+  "keywords": [
+    "vue",
+    "nouislider",
+    "slider",
+    "component"
+  ],
+  "author": "antongorodezkiy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/antongorodezkiy/vue-nouislider/issues"
+  },
+  "homepage": "https://github.com/antongorodezkiy/vue-nouislider#readme"
+}
