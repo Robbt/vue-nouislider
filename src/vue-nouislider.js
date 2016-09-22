@@ -17,7 +17,8 @@ Vue.component('nouislider', {
     'sliderStep',
     'sliderLowLimit',
     'sliderHighLimit',
-    'showTooltips'
+    'showTooltips',
+    'sliderDirection'
   ],
   
   template: '<div :id="sliderId"></div>',
@@ -95,10 +96,14 @@ Vue.component('nouislider', {
       step: this.sliderStep,
       behaviour: 'snap',
       animate: false,
+      direction: (
+        typeof this.sliderDirection != 'undefined'
+        && this.sliderDirection
+          ? this.sliderDirection
+          : 'ltr'
+      ),
       range
     };
-    
-    console.log('this.settings', JSON.parse(JSON.stringify(this.settings)));
     
     this.updateSlider();
   },
@@ -174,9 +179,7 @@ Vue.component('nouislider', {
           $(this.$el).parent().addClass('priceRange');
           
           $("#js-price-slider-tooltip", this.$el).html(
-            '<div class="sharketPin"></div>' +
-            '<strong class="tt-u">' + Sharket.app.t('Your Price Range') + '</strong>' +
-            '<span>$' + this.sliderStartValue + ' - $' + this.sliderEndValue + '</span>'
+            '<span>' + this.sliderStartValue + ' - $' + this.sliderEndValue + '</span>'
           );
         }
         
@@ -185,9 +188,7 @@ Vue.component('nouislider', {
           $(this.$el).parent().removeClass('priceRange');
           
           $("#js-price-slider-tooltip", this.$el).html(
-            '<div class="sharketPin"></div>' +
-            '<strong>' + Sharket.app.t('Asking') + '</strong>' +
-            '<span>$' + this.sliderEndValue + '</span>'
+            '<span>' + this.sliderEndValue + '</span>'
           );
         }
       }

@@ -1,6 +1,6 @@
 {
   "name": "vue-nouislider-component",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Vue.js component for Nouislider plugin.",
   "main": "src/vue-nouislider.js",
   "scripts": {
