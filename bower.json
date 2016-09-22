@@ -5,7 +5,7 @@
     "ppoteralski <poteralski.dev@gmail.com>",
     "antongorodezkiy <antongorodezkiy@gmail.com>"
   ],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {
     "vue": "~1.0.26",
     "nouislider": "~8.5.1"

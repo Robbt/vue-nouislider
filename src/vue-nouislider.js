@@ -4,8 +4,6 @@
  * Improved by antongorodezkiy
  */
 
-(function (Vue) {
-
 const
   noUiSlider = require('nouislider');
 
@@ -85,14 +83,22 @@ Vue.component('nouislider', {
     }
   
     this.settings = {
-      start: (this.sliderStartValue !== null && this.sliderStartValue !== '')
+      start: (
+        (
+          typeof this.sliderStartValue != 'undefined'
+          && this.sliderStartValue !== null
+          && this.sliderStartValue !== ''
+        )
         ? [this.sliderStartValue, this.sliderEndValue]
-        : [this.sliderEndValue],
+        : [this.sliderEndValue]
+      ),
       step: this.sliderStep,
       behaviour: 'snap',
       animate: false,
       range
     };
+    
+    console.log('this.settings', JSON.parse(JSON.stringify(this.settings)));
     
     this.updateSlider();
   },
@@ -102,7 +108,11 @@ Vue.component('nouislider', {
       if (!this.isInnerChange) {
         this.isInnerChange = true;
         
-        if (this.sliderStartValue !== null && this.sliderStartValue !== '') {
+        if (
+          typeof this.sliderStartValue != 'undefined'
+          && this.sliderStartValue !== null
+          && this.sliderStartValue !== ''
+        ) {
           this.settings.connect = true;
           this.settings.start = [this.sliderStartValue, this.sliderEndValue];
         }
@@ -155,7 +165,10 @@ Vue.component('nouislider', {
         });
       }
       
-      if (this.showTooltips) {
+      if (
+        typeof this.showTooltips != 'undefined'
+        && this.showTooltips
+      ) {
         // range
         if (this.sliderStartValue) {
           $(this.$el).parent().addClass('priceRange');
@@ -210,5 +223,3 @@ Vue.component('nouislider', {
     }
   }
 });
-
-})(window.Vue);

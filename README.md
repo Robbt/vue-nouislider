@@ -9,7 +9,7 @@ Forked from https://github.com/poteralski/vue-nouislider
 
 ```javascript
 const
-  nouisliderComponent = require('vue-nouislider');
+  nouisliderComponent = require('vue-nouislider-component');
 
 Vue.component('acme-component', {
   components: {
@@ -18,13 +18,26 @@ Vue.component('acme-component', {
 });
 ```
 
+*Two sliders*
+
 ```html
 <nouislider
 	:show-tooltips="false"
-	:slider-low-limit="minPrice"
-	:slider-start-value.sync="fromPrice"
-	:slider-end-value.sync="toPrice"
-	:slider-high-limit="maxPrice"
+	:slider-low-limit="0"
+	:slider-start-value.sync="startValue"
+	:slider-end-value.sync="endValue"
+	:slider-high-limit="10"
+	:slider-step="1"></nouislider>
+```
+
+*Single slider*
+
+```html
+<nouislider
+	:show-tooltips="false"
+	:slider-low-limit="0"
+	:slider-end-value.sync="endValue"
+	:slider-high-limit="10"
 	:slider-step="1"></nouislider>
 ```
 
