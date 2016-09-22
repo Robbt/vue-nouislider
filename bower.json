@@ -1,11 +1,11 @@
 {
-  "name": "vue-nouislider",
+  "name": "vue-nouislider-component",
   "homepage": "https://github.com/antongorodezkiy/vue-nouislider",
   "authors": [
     "ppoteralski <poteralski.dev@gmail.com>",
     "antongorodezkiy <antongorodezkiy@gmail.com>"
   ],
-  "version": "0.1.1",
+  "version": "0.0.1",
   "dependencies": {
     "vue": "~1.0.26",
     "nouislider": "~8.5.1"
