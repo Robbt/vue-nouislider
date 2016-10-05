@@ -11,6 +11,8 @@ Vue.component('nouislider', {
   props: [
     'sliderStartValue',
     'sliderEndValue',
+    'sliderRangeTooltip',
+    'sliderSingleTooltip',
     'sliderMin',
     'sliderAvg',
     'sliderMax',
@@ -178,18 +180,28 @@ Vue.component('nouislider', {
         if (this.sliderStartValue) {
           $(this.$el).parent().addClass('priceRange');
           
-          $("#js-price-slider-tooltip", this.$el).html(
-            '<span>' + this.sliderStartValue + ' - $' + this.sliderEndValue + '</span>'
-          );
+          if (
+            typeof this.sliderRangeTooltip != 'undefined'
+            && this.sliderRangeTooltip
+          ) {
+            $("#js-price-slider-tooltip", this.$el).html(
+              this.sliderRangeTooltip
+            );
+          }
         }
         
         // single
         else {
           $(this.$el).parent().removeClass('priceRange');
           
-          $("#js-price-slider-tooltip", this.$el).html(
-            '<span>' + this.sliderEndValue + '</span>'
-          );
+          if (
+            typeof this.sliderSingleTooltip != 'undefined'
+            && this.sliderSingleTooltip
+          ) {
+            $("#js-price-slider-tooltip", this.$el).html(
+              this.sliderSingleTooltip
+            );
+          }
         }
       }
     },

@@ -18,7 +18,7 @@ Vue.component('acme-component', {
 });
 ```
 
-*Two sliders*
+*Range slider*
 
 ```html
 <nouislider
@@ -41,3 +41,26 @@ Vue.component('acme-component', {
 	:slider-step="1"></nouislider>
 ```
 
+*Single slider with tooltip*
+
+```html
+<nouislider
+	:show-tooltips="false"
+	:slider-low-limit="0"
+	:slider-end-value.sync="endValue"
+	:slider-high-limit="10"
+	:slider-step="1"
+	:slider-single-tooltip="singleSliderTooltip"></nouislider>
+```
+
+*Single slider reversed direction*
+
+```html
+<nouislider
+	:show-tooltips="false"
+	:slider-low-limit="0"
+	:slider-end-value.sync="endValue"
+	:slider-high-limit="10"
+	:slider-step="1"
+	slider-direction="rtl"></nouislider>
+```
