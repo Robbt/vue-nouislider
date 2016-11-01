@@ -5,13 +5,13 @@
     "ppoteralski <poteralski.dev@gmail.com>",
     "antongorodezkiy <antongorodezkiy@gmail.com>"
   ],
-  "version": "0.0.4",
+  "version": "0.0.5",
   "dependencies": {
     "vue": "~1.0.26",
     "nouislider": "~8.5.1"
   },
   "description": "Vue.js component for Nouislider plugin.",
-  "main": "src/vue-nouislider.js",
+  "main": "dist/vue-nouislider.js",
   "keywords": [
     "vue",
     "slider",
