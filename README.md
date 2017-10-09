@@ -1,9 +1,11 @@
-vue-nouislider
+vue2-nouislider
 ==============
 
 Simple Vue.js component for [nouislider](http://refreshless.com/nouislider/) plugin.
 
 Forked from https://github.com/poteralski/vue-nouislider
+And then Forked from https://github.com/antongorodezkiy/vue-nouislider
+and Updated to work with Vue 2.0 as .vue file vs. js include
 
 ### Usage:
 
@@ -16,7 +18,20 @@ Vue.component('acme-component', {
     nouisliderComponent
   }
 });
+
+
+
 ```
+or with Webpack in your main.js file
+```javascript
+import nouislider from './components/NouiSlider'
+
+Vue.component('nouislider', nouislider)
+
+
+
+```
+
 
 *Range slider*
 

@@ -1,5 +1,5 @@
 {
-  "name": "vue-nouislider-component",
+  "name": "vue2-nouislider-component",
   "homepage": "https://github.com/antongorodezkiy/vue-nouislider",
   "authors": [
     "ppoteralski <poteralski.dev@gmail.com>",
@@ -7,7 +7,7 @@
   ],
   "version": "0.0.5",
   "dependencies": {
-    "vue": "~1.0.26",
+    "vue": "~2.0",
     "nouislider": "~8.5.1"
   },
   "description": "Vue.js component for Nouislider plugin.",
